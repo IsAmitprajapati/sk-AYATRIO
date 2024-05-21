@@ -48,7 +48,7 @@ const Header = () => {
             {
                 headerNavigation.map((nav,index)=>{
                     return(
-                        <Link href={nav.href} className='font-bold px-1'>
+                        <Link href={nav.href} key={nav.label+index+"headerNavigation"} className='font-bold px-1'>
                             {nav.label}
                         </Link>  
                     )

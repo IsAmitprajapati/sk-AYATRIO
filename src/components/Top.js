@@ -41,7 +41,7 @@ const Top = () => {
             {
                 topNavigation.map((nav,index)=>{
                     return(
-                        <div className='text-sm font-light flex items-center gap-1'>
+                        <div className='text-sm font-light flex items-center gap-1' key={nav.label+index}>
                             { (index !== 0)  && (topNavigation.length !== index-1) && <span>|</span> }
                             <Link href={nav.href} className='hover:underline flex items-center gap-1'>
                             {
