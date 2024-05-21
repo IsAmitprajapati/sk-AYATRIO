@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 const StepThree = () => {
   const [active,setActive] = useState()
 
-  const stepOneData = [
+  const stepData = [
     {
       icon : '/assets/rupees.jpg',
       amt : 10000,
@@ -30,15 +30,15 @@ const StepThree = () => {
   return (
     <div className='flex items-center flex-wrap py-4 gap-6'>
         {
-          stepOneData.map((data,index)=>{
+          stepData.map((data,index)=>{
             return(
               <div key={data.label+index} onClick={()=>setActive(index)} className={`hover:text-black min-w-40  max-w-56 border p-1   cursor-pointer ${active === index ? "border-black" : "border-neutral-300" }`}>
                   <div className='flex'>
                     <Image
                         src={data.icon}
                         alt={data.label}
-                        width={50}
-                        height={30}
+                        width={28}
+                        height={25}
 
                     />
                     <p className='text-4xl'>{data.amt}</p>
